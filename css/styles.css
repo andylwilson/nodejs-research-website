@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+body {
+    font-size:100%;
+    line-height:1.5;
+    font-family: 'Raleway', sans-serif;
+    background-color:#e5eefc;
+}
+
+#wrapper {
+    width:940px;
+    margin:0 auto 40px auto;
+    background-color:aliceblue;
+}   
+
+header {
+    width:940px;
+    margin:30px auto 0 auto;
+    background-color:aliceblue;
+}
+
+nav {
+    height:50px;
+    background-color:lightsteelblue;
+    line-height:50px;
+}
+
+nav ul {
+    width:940px;
+    margin:0 auto;
+}
+
+nav li {
+    font-family: 'Open Sans', sans-serif;
+    float:left;
+    width:20%;
+    list-style-type:none;
+    text-align:center;
+}
+
+nav a {
+    color:#fff;
+    text-decoration:none;
+    display:block;
+}
+
+nav a:hover {
+    background-color:steelblue;
+}
+
+main {
+    width:560px;
+    float:left;
+    padding-right:7px;
+}
+
+main p {
+    font-size:1em;
+    padding-bottom:25px;
+    margin:10px 0 10px 20px;
+}
+
+aside {
+    margin:20px 20px 0 0;
+    padding:20px 20px 20px 20px;
+    float:right;
+    width:340px;
+    background-color:#e5eefc;
+    border:2px dashed navy;
+    border-radius:15px;
+}
+
+aside p {
+    font-size:.875em;
+    margin:10px 0;
+}
+
+aside ul {
+    padding-left:30px;
+    font-size:.875em;
+}
+
+footer {
+    height:80px;
+    line-height:80px;
+    clear:both;   
+}
+
+footer ul {
+    margin:0 auto;
+    width:600px;
+}
+
+footer li {
+    list-style-type:none;
+    float:left;
+    margin:0 10px 0 10px
+}
+
+img {
+    display:block;
+    max-width:100%;
+}
+
+img.logo {
+    padding-left:10px;
+}
+
+img.left {
+    float:left;
+    margin:0 20px;
+}
+
+img.right {
+    float:right;
+    margin-left:15px;
+}
+
+img.aside {
+    padding-left:20px;
+}
+
+img.big {
+    padding:30px;
+}
+
+hr {
+    margin:0 20px;
+}
+
+/* +++++++++++++ typography ++++++++++++ */
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size:2.074em;
+    margin:10px 0 10px 20px;
+    padding:10px 0 0 0;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size:1.728em;
+    margin:10px 0 10px 20px;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size:1.44em;
+    margin-bottom:10px;
+}
+
