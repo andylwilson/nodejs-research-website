@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hello World Tutorial</title>
+
+<!--Remy Sharp Shim --> 
+<!--[if lte IE 9]> 
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js" type="text/javascript" >
+</script> 
+<![endif]-->
+    <link href="css/styles.css" type="text/css" rel="stylesheet">    
+</head>
+    
+    <body id="tutorial">
+    <header>
+        <h1>Our Cloud9 Project Website</h1>
+        <h3>Creating a Node.js Hello World app!</h3>
+        
+        <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="history.html">HISTORY</a></li>
+            <li><a href="why.html">WHY USE NODE.JS?</a></li>
+            <li><a href="tutorial.html">HELLO WORLD</a></li> 
+        </ul>
+        </nav>
+    
+    </header>
+
+    <div id="wrapper">
+        
+    <main>
+        
+        <h1>Hello World! Tutorial</h1>
+        <p>So you want to get your feet wet with Node.js!</p>
+        <p>Here is a walkthough of the most basic operation: displaying "Hello World" on a page.</p>
+
+        <h2>Getting Started</h2>
+    
+        <p>There are a few things you'll need to do before anything will work properly:</p>
+        
+        <ul>
+        <li>Head to <a href="nodejs.org">nodejs.org</a> to download the node.js files to your computer</li>
+        <li>Or be working in a development environment like Cloud9 where node.js is already set up</li>
+        </ul>
+        
+        <h2>Let's Begin</h2>
+        <p>Your program will start off with calling a required module and saving it to a variable. </p>
+        
+        <pre><code>
+            var http = require('http);
+        </code></pre>
+        <p>The http module allows node.js to transfer data over http and contains other useful functions</p>
+        
+        <h2>Setup the function</h2>
+        <p>One of the functions in the http module that we will be using in the program is createServer(). Which does exactly as the name implies:</p>
+         <pre><code>
+            http.createServer(
+                function(req,res)
+                    {
+                    res.writeHead(200, {'Content-Type':'text/plain'});
+                    res.end('Hello World\n');
+                    }
+            ).listen(8080);                    
+        </code></pre>        
+        
+      <p>The writeHead() fuction sets up some parameters for the web browser:</p>
+        
+    <pre><code>
+            res.writeHead(200, {'Content-Type':'text/plain'});                
+        </code></pre>
+        
+        <ul>
+        <li>200 is a status code which tells the browser that everything is OK</li>
+        <li>Content-Type tells the browser what format the information will be in</li>
+        </ul>
+        
+        <p>At the end of the createServer() function we tell the server which port to listen to when running our program:</p>
+    <pre><code>
+          ).listen(8080);                    
+        </code></pre> 
+        
+        <h2>How to Run</h2>
+        <p>Once you have gotten all the code writen in your program now it's time for the fun part! Testing it out live</p>
+        
+        <p>In Cloud9 this is a simple matter of selecting the Run option from the menu and waiting for it to generate a url to click on. If evertyhing is working properly you should click on this link and see the words "Hello World" displayed on your browser page.</p>
+       
+       <p>If you are set up to work on your own computer you will simply need to open up a new tab in the browser and type in <a href=""></a>you should see "Hello World" displayed on the screen.</p>
+        
+    </main>
+    
+    <aside>
+        <h3>Sidebar Content</h3>
+        <ul>
+            <li><strong><em>List item 1</em></strong></li>
+            <li><strong><em>List item 2</em></strong></li>
+            <li><strong><em>List item 3</em></strong></li>
+        </ul>
+        <p>Nam sem risus, ultrices ut scelerisque at, blandit sed erat. Vivamus dignissim ante eros, at ornare est laoreet eu. Morbi aliquam diam sed mauris dignissim mollis.</p>
+
+        <img src="images/home-logo.png" alt="nodejs logo">
+        
+    </aside>
+
+    <footer>
+        <hr>
+        <ul>
+            <li>Copyright 2019 &copy;</li>
+            <li>All Rights Reserved</li>
+            <li><a href="../index.html">Web Design by Andy</a></li>
+            <li><a href="https://validator.w3.org/check?uri=referer"><img src="images/html5.png" alt="HTML5 Logo"></a></li>
+        </ul>
+    </footer>
+    
+    </div> <!--end of wrapper-->
+   
+</body>
+</html>

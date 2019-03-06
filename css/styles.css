@@ -89,6 +89,24 @@ aside ul {
     font-size:.875em;
 }
 
+/*********  Tutorial Page   ************/
+#tutorial li{
+    list-style-position: inside;
+    padding-left: 50px;
+}
+
+code{
+    display:block;
+    background-color: cornflowerblue;
+    border:1px solid #999;
+    margin:20px;
+}
+
+#tutorial p{
+    padding-bottom: 5px;
+}
+
+/*********  End Tutorial Page   ************/
 footer {
     height:80px;
     line-height:80px;
