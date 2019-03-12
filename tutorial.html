@@ -84,6 +84,18 @@
         <h2>How to Run</h2>
         <p>Once you have gotten all the code written in your program now it's time for the fun part! Testing it out live</p>
         
+        <p>Your final code should look like this:</p>
+        
+        <pre><code>
+            var http = require('http');
+
+            http.createServer(function (request, response) 
+            {
+              response.writeHead(200, {'Content-Type': 'text/plain'});
+              response.end('Hello World\n');
+            }).listen(8080);     
+        </code></pre>
+        
         <p>In Cloud9 this is a simple matter of selecting the Run option from the menu and waiting for it to generate a url to click on. If evertyhing is working properly you should click on this link and see the words "Hello World" displayed on your browser page.</p>
        
        <p>If you are set up to work on your own computer you will simply need to open up a new tab in the browser and type in <a href=""></a>you should see "Hello World" displayed on the screen.</p>
