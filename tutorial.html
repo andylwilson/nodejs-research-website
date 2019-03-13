@@ -42,57 +42,85 @@
         
         <ul>
         <li>Head to <a href="nodejs.org">nodejs.org</a> to download the node.js files to your computer</li>
-        <li>Or be working in a development environment like Cloud9 where node.js is already set up</li>
+            <li>Or be working in a development environment like <a href="c9.io">Cloud9</a> where node.js is already set up</li>
         </ul>
         
         <h2>Let's Begin</h2>
         <p>Your program will start off with calling a required module and saving it to a variable. </p>
         
         <pre><code>
-            var http = require('http);
+        var http = require('http);
         </code></pre>
-        <p>The http module allows node.js to transfer data over http and contains other useful functions</p>
+        <p>The http module allows node.js to transfer data over http and contains many other useful functions.</p>
         
         <h2>Setup the function</h2>
         <p>One of the functions in the http module that we will be using in the program is createServer(). Which does exactly as the name implies:</p>
          <pre><code>
-            http.createServer(
-                function(req,res)
-                    {
-                    res.writeHead(200, {'Content-Type':'text/plain'});
-                    res.end('Hello World\n');
-                    }
-            ).listen(8080);                    
+        http.createServer(
+            function(req,res)
+                {
+                res.writeHead(200, {'Content-Type':'text/plain'});
+                res.end('Hello World\n');
+                }
+        ).listen(8080);                    
         </code></pre>        
         
       <p>The writeHead() fuction sets up some parameters for the web browser:</p>
         
     <pre><code>
-            res.writeHead(200, {'Content-Type':'text/plain'});                
+        {res.writeHead(200, {'Content-Type':'text/plain'});}                
         </code></pre>
         
         <ul>
         <li>200 is a status code which tells the browser that everything is OK</li>
-        <li>Content-Type tells the browser what format the information will be in</li>
+        <li>Content-Type tells the browser what format the information will be in - in our case plain text</li>
         </ul>
         
         <p>At the end of the createServer() function we tell the server which port to listen to when running our program:</p>
-    <pre><code>
-          ).listen(8080);                    
+        <pre><code>
+        ).listen(8080);                    
         </code></pre> 
         
         <h2>How to Run</h2>
-        <p>Once you have gotten all the code written in your program now it's time for the fun part! Testing it out live</p>
+        <p>Once you have gotten all the code written in your program now it's time for the fun part! Testing it out live!</p>
         
-        <p>In Cloud9 this is a simple matter of selecting the Run option from the menu and waiting for it to generate a url to click on. If evertyhing is working properly you should click on this link and see the words "Hello World" displayed on your browser page.</p>
+        <p>Your final code should look like this and be saved with an easy to remember name like "hello.js":</p>
+        
+        <pre><code>
+        var http = require('http');
+
+        http.createServer(function (request, response) 
+        {
+          response.writeHead(200, {'Content-Type': 'text/plain'});
+          response.end('Hello World\n');
+        }).listen(8080);     
+        </code></pre>
+        
+        <p>In Cloud9 running this file is a simple matter of selecting the Run option from the menu and waiting for it to generate a url to click on. If everything is working properly, when you click on this link the words "Hello World" will be displayed on your browser page.</p>
        
-       <p>If you are set up to work on your own computer you will simply need to open up a new tab in the browser and type in <a href=""></a>you should see "Hello World" displayed on the screen.</p>
+       <p>If you are set up to work on your own computer you will need to run the file from the command line with the command: </p>
+        
+          <pre><code>
+        node hello.js                    
+        </code></pre> 
+        
+        <p>You should see 'Server started' and then you can open up a new tab in the browser and type in <a href="http://localhost:8080">http://localhost:8080</a> and "Hello World" should be displayed on the screen.</p>
         
     </main>
     
     <aside>
-        
 
+        <h3>Helpful Tutorials</h3>
+        
+         <p>For additional information and more fun tutorials check out the following places:</p>
+        
+        <ul>
+            <li><strong><em><a href="http://www.theprojectspot.com/tutorial-post/Node-js-for-beginners-part-1-hello-world/2">The Project Spot 'Hello World'</a></em></strong></li>
+            <li><strong><em><a href="https://blog.codeship.com/node-js-tutorial/">Codeship Node.js Tutorial</a></em></strong></li>
+            <li><strong><em><a href="https://www.tutorialspoint.com/nodejs/index.htm">Tutorials Point Node.js</a></em></strong></li>
+            
+        </ul>
+       
         <img src="images/home-logo.png" alt="nodejs logo">
         
     </aside>
